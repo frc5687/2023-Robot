@@ -155,6 +155,11 @@ public class DriveTrain extends OutliersSubsystem {
         metric("SE/Predicted Wheel Vel", _southEast.getPredictedWheelVelocity());
 
         metric("Odometry Pose", getOdometryPose().toString());
+
+        metric("IMU yaw", _imu.getYaw());
+        metric("IMU pitch", _imu.getPitch());
+        metric("IMU temp", _imu.getTemp());
+        metric("IMU up time", _imu.getUpTime());
     }
 
     public void setNorthEastModuleState(SwerveModuleState state) {
