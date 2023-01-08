@@ -21,6 +21,11 @@ public class RobotMap {
             public static final int NORTH_WEST_INNER = 8;
             public static final int NORTH_WEST_OUTER = 7;
         }
+
+        public static class PIGEON {
+            public static final int PIGEON = 0;
+            public static final String PIGEON_BUS_NAME = "rio";
+        }
     }
 
     /**

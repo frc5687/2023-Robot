@@ -4,7 +4,7 @@ package org.frc5687.chargeup.subsystems;
 import static org.frc5687.chargeup.Constants.DifferentialSwerveModule.*;
 import static org.frc5687.chargeup.Constants.DriveTrain.*;
 
-import com.kauailabs.navx.frc.AHRS;
+import com.ctre.phoenix.sensors.Pigeon2;
 import edu.wpi.first.math.controller.HolonomicDriveController;
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.controller.ProfiledPIDController;
@@ -36,13 +36,13 @@ public class DriveTrain extends OutliersSubsystem {
 
     private double _PIDAngle;
 
-    private AHRS _imu;
+    private Pigeon2 _imu;
     private OI _oi;
 
     private HolonomicDriveController _controller;
     private ProfiledPIDController _angleController;
 
-    public DriveTrain(OutliersContainer container, OI oi, AHRS imu) {
+    public DriveTrain(OutliersContainer container, OI oi, Pigeon2 imu) {
         super(container);
         _oi = oi;
         _imu = imu;
@@ -181,8 +181,11 @@ public class DriveTrain extends OutliersSubsystem {
         return Rotation2d.fromDegrees(-getYaw());
     }
 
+    /**
+     * Sets the Pigeon IMU yaw to zero
+     */
     public void resetYaw() {
-        _imu.reset();
+        _imu.setYaw(0);
     }
 
     /**
