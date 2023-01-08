@@ -1,9 +1,9 @@
 /* (C)2020-2021 */
-package org.frc5687.chargeup.commands;
+package org.frc5687.chargedup.commands;
 
-import org.frc5687.chargeup.util.ILoggingSource;
-import org.frc5687.chargeup.util.MetricTracker;
-import org.frc5687.chargeup.util.RioLogger;
+import org.frc5687.chargedup.util.ILoggingSource;
+import org.frc5687.chargedup.util.MetricTracker;
+import org.frc5687.chargedup.util.RioLogger;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
