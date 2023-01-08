@@ -2,7 +2,6 @@
 package org.frc5687.chargeup;
 
 import com.ctre.phoenix.sensors.Pigeon2;
-import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import org.frc5687.chargeup.commands.Drive;
 import org.frc5687.chargeup.commands.OutliersCommand;
